@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 
 st.title("Car Insurance Claim Prediction")
 st.markdown("Predict whether the policyholder will file a claim in the next 6 months or not.")
-image = Image.open('image\CAR.jpg')
+image = Image.open('image/CAR.jpg')
 st.image(image)
 
 
