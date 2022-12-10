@@ -7,15 +7,13 @@ from PIL import Image
 import warnings
 warnings.filterwarnings('ignore')
 
-#from sklearn.model_selection import train_test_split, GridSearchCV
-#from category_encoders import OrdinalEncoder, OneHotEncoder
-#from sklearn.metrics import accuracy_score, ConfusionMatrixDisplay
-#from sklearn.linear_model import LogisticRegression
-#from sklearn.tree import DecisionTreeClassifier
-#from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-#from sklearn.pipeline import make_pipeline
+st.set_page_config(
+    page_title="Car Insurance Claim Prediction",
+    page_icon="👋",
+)
 
-st.title("Car Insurance Claim Prediction")
+
+#st.title("Car Insurance Claim Prediction")
 st.markdown("Predict whether the policyholder will file a claim in the next 6 months or not.")
 image = Image.open('image/CAR.jpg')
 st.image(image)
@@ -35,9 +33,7 @@ def wrangle(filepath):
 df = wrangle("data/train/train.csv")
 df_test = wrangle("data/test/test.csv")
 
-def main_page():
-    #st.markdown("# Main page 🎈")
-    #st.sidebar.markdown("# Main page 🎈")
+def main():
     st.markdown("Predict whether the policyholder will file a claim in the next 6 months or not.")
     image = Image.open('image\CAR.jpg')
     st.image(image)    
