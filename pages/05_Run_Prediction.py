@@ -15,7 +15,6 @@ def predict(data):
     clf = joblib.load('models/rf_model.sav')
     return clf.predict(data)
 
-@st.cache
 def grid_select(df: pd.DataFrame):
     gb = GridOptionsBuilder.from_dataframe(df)
     gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
