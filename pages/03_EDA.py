@@ -11,7 +11,9 @@ import streamlit.components.v1 as components
 # https://github.com/fbdesignpro/sweetviz
 
 df = main.df
-st.header("Exploratory Data Analysis (EDA)")
+#st.header("Exploratory Data Analysis (EDA)")
+st.markdown("# Exploratory Data Analysis (EDA)")
+st.sidebar.header("Exploratory Data Analysis")
 #st.write(df.shape)
 
 tab1,tab2,tab3 = st.tabs(['Collinearity','Univariate Analysis','Sweetviz'])
