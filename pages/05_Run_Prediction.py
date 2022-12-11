@@ -6,7 +6,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 
 test_df = main.df_test
 train_df = main.df
-
+proceed = False
 
 
 #Caching the model for faster loading
