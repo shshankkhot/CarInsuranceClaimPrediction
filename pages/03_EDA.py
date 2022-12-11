@@ -21,7 +21,7 @@ with tab1:
         sns_fig = plt.figure(figsize=(10, 4))
         st.title("Checking for multicollinearity") 
         st.markdown('To use linear regression for modelling,its necessary to remove correlated variables to improve your model. \nWe are using pandas “.corr()” correlations function to do the same and visualizing the correlation matrix using a heatmap in seaborn.')
-        correlation = df.select_dtypes("number").drop("is_claim", axis=1).corr()
+        correlation = round(df.select_dtypes("number").drop("is_claim", axis=1).corr(),2)
         # applying mask
         mask = np.triu(np.ones_like(df.select_dtypes("number").drop("is_claim", axis=1).corr()))
         sns.heatmap(correlation,annot=True,mask=mask);
