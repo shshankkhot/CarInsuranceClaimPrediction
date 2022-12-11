@@ -16,7 +16,7 @@ import joblib
 
 df = main.df
 df_test=main.df_test
-st.title("Model Building and Evaluation Details")
+st.title("Model Building and Evaluation")
 
 st.header("Seprating Target from source data")
 
@@ -78,7 +78,7 @@ def make_model_pl():
 
 st.header("Test the Model Performance")        
 ml = {" ":" ","LogisticRegression":"lr","DecisionTreeClassifier":"dt","RandomForestClassifier":"rf","GradientBoostingClassifier":"gb"}   
-Obj = st.selectbox("### Please Select the Model from the list :",ml.keys())
+Obj = st.selectbox("Please Select the Model from the list :",ml.keys())
 
 ml_selected = ml.get(Obj)
 
