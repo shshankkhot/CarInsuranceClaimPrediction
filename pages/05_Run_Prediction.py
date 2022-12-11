@@ -69,10 +69,10 @@ if selection.selected_rows:
         result = predict(selected_df)
         for i in range(len(selected_df)):
             if result[i] == 0 :
-                st.markdown('# We are not expecting any claims on below policy')
+                st.markdown('## We are not expecting any claims on below policy')
                 st.write(selected_df.loc[[i]])
             else:
-                st.markdown('# High posibility of getting claim on below policy')
+                st.markdown('## High posibility of getting claim on below policy')
                 st.write(selected_df.loc[[i]])
 else:
     st.warning("Please select the policy")
