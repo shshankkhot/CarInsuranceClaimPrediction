@@ -41,7 +41,7 @@ def grid_select(df: pd.DataFrame):
     )
     return grid_response
 
-st.title('Policy Claim Predictor')
+#st.title('Policy Claim Predictor')
 td = st.selectbox("Select the Sample Dataset for predection",('Train Data','Test Data'))
 size=st.slider("Select sample size",10,100,10)
 st.header('Select the policy below to predict the claim status:')
