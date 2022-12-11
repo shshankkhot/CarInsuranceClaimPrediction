@@ -12,7 +12,7 @@ train_df = main.df
 #Caching the model for faster loading
 @st.cache
 def predict(data):
-    clf = joblib.load('rf_model.sav')
+    clf = joblib.load('models/rf_model.sav')
     return clf.predict(data)
 
 
