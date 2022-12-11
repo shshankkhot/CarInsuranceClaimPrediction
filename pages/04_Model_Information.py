@@ -95,7 +95,7 @@ if ml_selected == 'gb':
     st.write('Test Accuracy of GradientBoostingClassifier model',0.5745370765423671)
 st.markdown('----------------------------------------------------------------')
 
-st.header('From the above scores, we can see that RandomForestClassifier performed best on the test data with acc_score of 0.92')
+st.header('From the model scores, we can see that RandomForestClassifier performed best on the test data with acc_score of 0.92')
 def final_model():
     rff = make_pipeline(OrdinalEncoder(),
                     RandomForestClassifier(random_state=1))
@@ -121,7 +121,7 @@ def final_model():
     st.write("MSE:", mean_squared_error(y_test, fit_model.predict(X_test)))
     st.write("R2:", r2_score(y_test, fit_model.predict(X_test)))
 
-    y_pred_test =  Model.predict(X_test)
+    y_pred_test =  fit_model.predict(X_test)
     st.write("Model Test Accuracy",round(accuracy_score(y_test, y_pred_test),2))
     
     #Model.save_model('rff_model.json')
