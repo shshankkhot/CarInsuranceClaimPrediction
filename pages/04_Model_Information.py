@@ -126,8 +126,9 @@ def final_model():
     
     #Model.save_model('rff_model.json')
 
-rf_ml = st.button("Run RandomForestClassifier  Model")
-
+#Commented option to run model to save streamlit resourcess 
+#rf_ml = st.button("Run RandomForestClassifier  Model")
+rf_ml=False
 if rf_ml == True:
     final_model()
 else:
