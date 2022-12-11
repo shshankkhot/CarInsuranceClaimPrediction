@@ -52,7 +52,7 @@ if td == 'Test Data':
     selection = grid_select(prd_df)
     proceed=True
 
-if proceed=True :
+if proceed==True:
     if selection.selected_rows:
         #st.write("You selected:")
         #st.json(selection["selected_rows"])
