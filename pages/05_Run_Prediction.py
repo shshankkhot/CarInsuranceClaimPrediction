@@ -6,7 +6,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 
 test_df = main.df_test
 train_df = main.df
-proceed = False
+
 
 
 #Caching the model for faster loading
@@ -43,15 +43,18 @@ st.header('Select the policy below to predict the claim status:')
 if td== 'Train Data':
     prd_df=train_df.head(size)
     prd_df=prd_df.drop(["is_claim"],axis=1)
-    selection = grid_select(prd_df)
     proceed=True
 
 if td == 'Test Data':
     prd_df=test_df.sample(size)
-    selection = grid_select(prd_df)
     proceed=True
-
+if td == ' ':
+    proceed = False
+   
+    
 if proceed==True:
+    selection = grid_select(prd_df)
+    
     if selection.selected_rows:
         #st.write("You selected:")
         #st.json(selection["selected_rows"])
