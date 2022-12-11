@@ -29,13 +29,15 @@ def grid_select(df: pd.DataFrame):
         df,
         gridOptions=gridOptions,
         data_return_mode='AS_INPUT', 
-        update_mode='MODEL_CHANGED', 
+        #update_mode='MODEL_CHANGED', 
         fit_columns_on_grid_load=False,
         theme='alpine', #Add theme color to the table
         enable_enterprise_modules=True,
         height=500, 
         width='100%',
-        reload_data=True
+        suppressRowDeselection=True,
+        rowMultiSelectWithClick=True
+        #reload_data=True
     )
     return grid_response
 
