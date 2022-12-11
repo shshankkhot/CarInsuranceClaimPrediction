@@ -7,7 +7,10 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 test_df = main.df_test
 train_df = main.df
 
+st.set_page_config(page_title="Run Prediction", page_icon="📊")
 
+st.markdown("# Policy Claim Predictor")
+st.sidebar.header("Run Prediction")
 
 #Caching the model for faster loading
 @st.cache
@@ -41,12 +44,12 @@ td = st.selectbox("Select the Sample Dataset for predection",('Train Data','Test
 size=st.slider("Select sample size",10,100,10)
 st.header('Select the policy below to predict the claim status:')
 if td== 'Train Data':
-    prd_df=train_df.head(size)
+    prd_df=train_df.head(n=size)
     prd_df=prd_df.drop(["is_claim"],axis=1)
     #proceed=True
 
 if td == 'Test Data':
-    prd_df=test_df.sample(size)
+    prd_df=test_df.head(n=size)
    # proceed=True
    
     
