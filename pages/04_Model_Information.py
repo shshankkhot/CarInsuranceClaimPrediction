@@ -16,8 +16,10 @@ import joblib
 
 df = main.df
 df_test=main.df_test
-st.title("Model Building and Evaluation")
+#st.title("Model Building and Evaluation")
 
+st.markdown("# Model Building and Evaluation")
+st.sidebar.header("Model Information")
 st.header("Seprating Target from source data")
 
 target = "is_claim"
