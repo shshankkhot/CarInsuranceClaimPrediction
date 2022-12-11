@@ -115,7 +115,7 @@ def final_model():
 
    
     # save the model to disk
-    joblib.dump(fit_model, 'rf_model.sav')
+    #joblib.dump(fit_model, 'rf_model.sav')
 
     st.write("MAE:", mean_absolute_error(y_test, fit_model.predict(X_test)))
     st.write("MSE:", mean_squared_error(y_test, fit_model.predict(X_test)))
