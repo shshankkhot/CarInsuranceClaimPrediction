@@ -63,11 +63,7 @@ if proceed==True:
         selected_df=selected_df.drop(selected_df.columns[[0]],axis=1)
         #st.write(selected_df)
 
-    if selection.selected_rows:
         if st.button("Predict the policy claim"):
-            #for i in selected_df:
-            #for index, row in selected_df.iterrows():
-            #st.write(selected_df.head(0))
             result = predict(selected_df)
             for i in range(len(selected_df)):
                 if result[i] == 0 :
@@ -78,7 +74,6 @@ if proceed==True:
                     st.write(selected_df.loc[[i]])
     else:
         st.warning("Please select the policy")
-
 
 st.markdown('''Click on below link to understand how the grid data is sent back to streamlit and reused in other components.
                 [streamlit-aggrid](https://github.com/PablocFonseca/streamlit-aggrid)''')
