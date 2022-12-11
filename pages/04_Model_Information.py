@@ -16,6 +16,7 @@ import joblib
 
 df = main.df
 df_test=main.df_test
+st.title("Model Building and Evaluation Details")
 
 st.header("Seprating Target from source data")
 
@@ -75,12 +76,13 @@ def make_model_pl():
         score = accuracy_score(y_test, y_pred)
         st.write(f"The test accuracy score of {name} is {score}")
 
+st.header("Test the Model Performance")        
 ml = {" ":" ","LogisticRegression":"lr","DecisionTreeClassifier":"dt","RandomForestClassifier":"rf","GradientBoostingClassifier":"gb"}   
-Obj = st.selectbox("Select Model to check Performance :",ml.keys())
+Obj = st.selectbox("### Please Select the Model from the list :",ml.keys())
 
 ml_selected = ml.get(Obj)
 
-st.header("Model Test Performance")
+
 if ml_selected == 'lr':
     st.markdown('----------------------------------------------------------------')
     st.write('Test Accuracy of LogisticRegression model',0.4637767727621811)
