@@ -22,3 +22,21 @@ If you wish to run the app from Python instead of going to the above link, you c
 </ol>
 
 <hr>
+<hr>
+
+<h6>Data Sources</h6>
+
+The data used for our analysis was free and made publically availabe on Kaggle through the following links:
+<ul>
+  <li>https://www.kaggle.com/datasets/ifteshanajnin/carinsuranceclaimprediction-classification</li>
+</ul>  
+
+<hr>
+
+<h6>Reference Links</h6>
+<ul>
+  <li>https://docs.streamlit.io/</li>
+  <li>https://github.com/PablocFonseca/streamlit-aggrid</li>
+  <li>https://pypi.org/project/joblib/</li>
+  <li>https://docs.python.org/2/library/pickle.html</li>
+</ul>  
