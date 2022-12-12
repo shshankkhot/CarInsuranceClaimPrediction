@@ -17,7 +17,7 @@ If you wish to run the app from Python instead of going to the above link, you c
   <li>Make sure train.csv and test.csv files are in the respective folders "\data\train" and "\data\test"</li>
   <li>Use Requiremnets.txt to install all of the depended packages</li>
   <li>Use command line to excute the code by typing streamlit run main.py</li>
-  <li>streamlit should open new browser window to run the app</li>
+  <li>Streamlit should open new browser window to run the app</li>
   
 </ol>
 
